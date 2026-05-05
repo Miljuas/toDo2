@@ -134,6 +134,11 @@ document.getElementById("saveNote").addEventListener("click", () => {
     return;
   }
 
+  if (tagsElegidos.length === 0) {
+    alert("Elegí al menos un tag");
+    return;
+  }
+
   // Crear el objeto nota y agregarlo al array
   estados.notas.push({
     id: contadorId++, // usamos el contador y lo incrementamos
